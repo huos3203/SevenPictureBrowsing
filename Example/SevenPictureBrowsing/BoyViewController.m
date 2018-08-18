@@ -7,8 +7,10 @@
 //
 
 #import "BoyViewController.h"
+#import "SevenPicBrowsing.h"
 
 @interface BoyViewController ()
+@property (strong, nonatomic) IBOutlet SevenPicBrowsing *ibPicBrowsingView;
 
 @end
 
@@ -18,6 +20,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSMutableArray *imgArr = [NSMutableArray new];
+    for (int i = 0; i < 10; i++) {
+        UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%d",i]];
+        [imgArr addObject:img];
+    }
+    self.ibPicBrowsingView.imgArr = imgArr;
 }
 
 - (void)didReceiveMemoryWarning
