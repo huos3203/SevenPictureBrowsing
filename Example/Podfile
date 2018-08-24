@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'SevenPictureBrowsing_Example' do
   pod 'SevenPictureBrowsing', :path => '../'
-
+  pod 'SwiftLint', :git => 'https://github.com/realm/SwiftLint.git'
   target 'SevenPictureBrowsing_Tests' do
     inherit! :search_paths
 

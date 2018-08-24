@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XE3-kM-kZa" customClass="VASevenImgView">
+            <rect key="frame" x="0.0" y="0.0" width="476" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb8-Pg-4GT" customClass="SevenPicBrowsing">
+                    <rect key="frame" x="238" y="100" width="238" height="83"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFl-Wm-pAI">
+                            <rect key="frame" x="225" y="30.5" width="8" height="22"/>
+                            <state key="normal" image="zhinengyou.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-a5-WRC">
+                            <rect key="frame" x="5" y="30.5" width="7" height="22"/>
+                            <state key="normal" image="zhinengzuo.png"/>
+                        </button>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LXu-PS-MDU">
+                            <rect key="frame" x="17" y="1.5" width="203" height="80"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Nwb-o7-zpl"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="53P-ag-3o7">
+                                <size key="itemSize" width="92" height="75"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells>
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="SevenPicBrowsing" id="0vx-N2-5lH" customClass="SevenPicCell">
+                                    <rect key="frame" x="0.0" y="2.5" width="92" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIx-vk-PnC">
+                                                <rect key="frame" x="5" y="5" width="82" height="65"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dge-RS-rgH" customClass="HSProgressPopUpView">
+                                                <rect key="frame" x="5" y="70" width="82" height="0.0"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="fTZ-I4-tV9"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </view>
+                                    <constraints>
+                                        <constraint firstItem="TIx-vk-PnC" firstAttribute="leading" secondItem="0vx-N2-5lH" secondAttribute="leading" constant="5" id="06s-ti-6Wb"/>
+                                        <constraint firstAttribute="trailing" secondItem="TIx-vk-PnC" secondAttribute="trailing" constant="5" id="HV8-Ve-Mg7"/>
+                                        <constraint firstItem="TIx-vk-PnC" firstAttribute="width" secondItem="dge-RS-rgH" secondAttribute="width" id="LsU-dC-1lT"/>
+                                        <constraint firstItem="dge-RS-rgH" firstAttribute="centerX" secondItem="TIx-vk-PnC" secondAttribute="centerX" id="Msn-Vq-QGO"/>
+                                        <constraint firstAttribute="bottom" secondItem="TIx-vk-PnC" secondAttribute="bottom" constant="5" id="Svp-el-0hM"/>
+                                        <constraint firstItem="dge-RS-rgH" firstAttribute="bottom" secondItem="TIx-vk-PnC" secondAttribute="bottom" id="d8a-GH-lVh"/>
+                                        <constraint firstItem="TIx-vk-PnC" firstAttribute="top" secondItem="0vx-N2-5lH" secondAttribute="top" constant="5" id="eMf-NM-6G1"/>
+                                        <constraint firstItem="TIx-vk-PnC" firstAttribute="centerY" secondItem="0vx-N2-5lH" secondAttribute="centerY" id="v2j-xc-eTb"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="ibAddBut" destination="TIx-vk-PnC" id="tf5-IE-keu"/>
+                                        <outlet property="progressView" destination="dge-RS-rgH" id="afy-6r-D4f"/>
+                                    </connections>
+                                </collectionViewCell>
+                            </cells>
+                            <connections>
+                                <outlet property="dataSource" destination="Mb8-Pg-4GT" id="nhk-Qb-q8O"/>
+                                <outlet property="delegate" destination="Mb8-Pg-4GT" id="pTx-KR-aFb"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.51835151010000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="LXu-PS-MDU" firstAttribute="centerY" secondItem="Mb8-Pg-4GT" secondAttribute="centerY" id="2Zz-b2-ate"/>
+                        <constraint firstItem="LXu-PS-MDU" firstAttribute="leading" secondItem="b7P-a5-WRC" secondAttribute="trailing" constant="5" id="L8l-Y5-jOj"/>
+                        <constraint firstAttribute="height" constant="83" id="Prq-N3-fx0"/>
+                        <constraint firstItem="iFl-Wm-pAI" firstAttribute="leading" secondItem="LXu-PS-MDU" secondAttribute="trailing" constant="5" id="Uop-Gk-a38"/>
+                        <constraint firstItem="b7P-a5-WRC" firstAttribute="leading" secondItem="Mb8-Pg-4GT" secondAttribute="leading" constant="5" id="Z2a-6E-brL"/>
+                        <constraint firstItem="iFl-Wm-pAI" firstAttribute="centerY" secondItem="Mb8-Pg-4GT" secondAttribute="centerY" id="bOv-AL-8vw"/>
+                        <constraint firstItem="b7P-a5-WRC" firstAttribute="centerY" secondItem="Mb8-Pg-4GT" secondAttribute="centerY" id="epf-7S-xki"/>
+                        <constraint firstAttribute="trailing" secondItem="iFl-Wm-pAI" secondAttribute="trailing" constant="5" id="wHk-Mc-qbC"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="collectionView" destination="LXu-PS-MDU" id="zWZ-a0-Jfg"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gA-Ga-jMq">
+                    <rect key="frame" x="350" y="10" width="53" height="43"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyc-34-83m">
+                            <rect key="frame" x="38" y="0.0" width="15" height="15"/>
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="8BB-6d-616"/>
+                                <constraint firstAttribute="width" secondItem="Yyc-34-83m" secondAttribute="height" id="8s3-Mm-GNR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zl-uB-90a">
+                            <rect key="frame" x="5" y="5" width="43" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="Od5-1b-SS9"/>
+                            </constraints>
+                            <state key="normal" image="zhinengzhaopian.png"/>
+                            <connections>
+                                <action selector="ibaShowSevenImgAction:" destination="XE3-kM-kZa" eventType="touchUpInside" id="Bas-KO-N5a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="6zl-uB-90a" firstAttribute="top" secondItem="2gA-Ga-jMq" secondAttribute="top" constant="5" id="1Te-pa-UaV"/>
+                        <constraint firstItem="6zl-uB-90a" firstAttribute="centerX" secondItem="2gA-Ga-jMq" secondAttribute="centerX" id="6cz-CX-DTa"/>
+                        <constraint firstItem="6zl-uB-90a" firstAttribute="leading" secondItem="2gA-Ga-jMq" secondAttribute="leading" constant="5" id="Cal-Ps-0CM"/>
+                        <constraint firstItem="Yyc-34-83m" firstAttribute="top" secondItem="2gA-Ga-jMq" secondAttribute="top" id="lUS-Xw-5qY"/>
+                        <constraint firstAttribute="trailing" secondItem="Yyc-34-83m" secondAttribute="trailing" id="pQt-7h-iKd"/>
+                        <constraint firstItem="6zl-uB-90a" firstAttribute="centerY" secondItem="2gA-Ga-jMq" secondAttribute="centerY" id="x52-aG-WGv"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98v-Ou-AkK">
+                    <rect key="frame" x="423" y="10" width="43" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="98v-Ou-AkK" secondAttribute="height" id="eck-BP-0su"/>
+                    </constraints>
+                    <state key="normal" image="zhinengkaoshi.png"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="98v-Ou-AkK" secondAttribute="trailing" constant="10" id="TYi-P1-kxL"/>
+                <constraint firstItem="Mb8-Pg-4GT" firstAttribute="width" secondItem="XE3-kM-kZa" secondAttribute="width" multiplier="1/2" id="VgT-2o-zee"/>
+                <constraint firstItem="98v-Ou-AkK" firstAttribute="top" secondItem="XE3-kM-kZa" secondAttribute="top" constant="10" id="g5v-pE-Yco"/>
+                <constraint firstAttribute="trailing" secondItem="Mb8-Pg-4GT" secondAttribute="trailing" id="iZI-G4-FMf"/>
+                <constraint firstAttribute="bottom" secondItem="Mb8-Pg-4GT" secondAttribute="bottom" id="qPr-sy-DNa"/>
+                <constraint firstItem="98v-Ou-AkK" firstAttribute="leading" secondItem="2gA-Ga-jMq" secondAttribute="trailing" constant="20" id="qV9-CL-W9q"/>
+                <constraint firstItem="2gA-Ga-jMq" firstAttribute="centerY" secondItem="98v-Ou-AkK" secondAttribute="centerY" id="sme-Sr-i2p"/>
+                <constraint firstItem="98v-Ou-AkK" firstAttribute="width" secondItem="6zl-uB-90a" secondAttribute="width" id="thK-bd-PJe"/>
+                <constraint firstItem="2gA-Ga-jMq" firstAttribute="top" secondItem="98v-Ou-AkK" secondAttribute="top" id="upr-Yz-6Ky"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ibShowImgConstraint" destination="iZI-G4-FMf" id="Ulk-mg-77j"/>
+                <outlet property="sevenImgNumLabel" destination="Yyc-34-83m" id="pxo-9f-ulI"/>
+                <outlet property="sevenPicBrowsing" destination="Mb8-Pg-4GT" id="UfC-2c-NPl"/>
+                <outlet property="showSevenImgButton" destination="6zl-uB-90a" id="etD-h9-bU4"/>
+            </connections>
+            <point key="canvasLocation" x="88" y="-287.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zhinengkaoshi.png" width="33" height="33"/>
+        <image name="zhinengyou.png" width="8" height="13"/>
+        <image name="zhinengzhaopian.png" width="33" height="33"/>
+        <image name="zhinengzuo.png" width="7" height="13"/>
+    </resources>
+</document>

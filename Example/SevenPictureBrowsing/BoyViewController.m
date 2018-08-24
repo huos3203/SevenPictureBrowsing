@@ -8,6 +8,7 @@
 
 #import "BoyViewController.h"
 #import "SevenPicBrowsing.h"
+#import "VASevenImgView.h"
 
 @interface BoyViewController ()
 @property (strong, nonatomic) IBOutlet SevenPicBrowsing *ibPicBrowsingView;
@@ -26,6 +27,16 @@
         [imgArr addObject:img];
     }
     self.ibPicBrowsingView.imgArr = imgArr;
+    
+    //图标点
+    //右上角
+    CGFloat x = [UIScreen mainScreen].bounds.size.width - 60;
+    CGFloat y = 10;
+    CGFloat wh = 30;
+    CGRect sevenFrame = CGRectMake(x, y, wh, wh);
+    VASevenImgView *sevenimg = [[VASevenImgView alloc] initWithFrame:sevenFrame];
+//    [sevenimg.showSevenImgButton setImage:[UIImage imageNamed:@"zhinengzhaopian"] forState:UIControlStateNormal];
+    [self.view addSubview:sevenimg];
 }
 
 - (void)didReceiveMemoryWarning

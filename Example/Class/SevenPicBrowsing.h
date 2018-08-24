@@ -7,11 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArchiveCameraModel.h"
+#import "HSProgressPopUpView.h"
 
 @interface SevenPicCell:UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView*imageView;
+@property (strong, nonatomic) ArchiveCameraModel *model;
+@property (strong, nonatomic) IBOutlet UIButton *ibAddBut;
+@property (strong, nonatomic) IBOutlet HSProgressPopUpView *progressView;
 @end
 
 @interface SevenPicBrowsing : UIView
-@property (strong, nonatomic) NSArray<UIImage *> *imgArr;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) NSMutableArray<ArchiveCameraModel *> *imgArr;
+@end
+
+
+@interface VASevenImgView:UIView
+@property (strong, nonatomic) IBOutlet UIButton *showSevenImgButton;
+@property (strong, nonatomic) IBOutlet UILabel *sevenImgNumLabel;
+@property (strong, nonatomic) IBOutlet SevenPicBrowsing *sevenPicBrowsing;
+-(void)sevenCapture;
 @end
